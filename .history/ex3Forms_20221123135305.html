@@ -6,47 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML - Forms</title>
-    <script>
-
-        document.getElementById("other").onclick = function () {
-
-            document.getElementById("othergender").disabled = false;
-
-            document.getElementById("othergender").focus;
-
-        }
-
-        document.getElementById("man").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("woman").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("none").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-    </script>
 </head>
 
 <body>
-    <hr>
     <h1>User registration</h1>
-    <hr>
-    <form id="formRegister" action="process.php" enctype="multipart/form-data">
+    <form action="process.php" enctype="">
         <p>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" maxlength="80" placeholder="Name" required>
@@ -113,17 +77,47 @@
 
         <p>
             <label for="photo">Photo:</label>
-            <input type="file" name="photo" id="photo" multiple accept="image/png, image/jpeg">
+            <input type="file" name="photo" id="photo" multiple accept="image/png">
         </p>
         <hr>
-        <p>
-            <button type="submit" id="btSubmit" name="btSubmit">Register</button>
-        </p>
-        <p>
-            <input type="reset" id="btReset" name="btReset" value="Reset form"></input>
-        </p>
-        <hr>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear form</button>
     </form>
+    <script>
+
+        document.getElementById("other").onclick = function () {
+
+            document.getElementById("othergender").disabled = false;
+
+            document.getElementById("othergender").focus;
+
+        }
+
+        document.getElementById("man").onclick = function () {
+
+            document.getElementById("othergender").disabled = true;
+
+            document.getElementById("othergender").value = "";
+
+        }
+
+        document.getElementById("woman").onclick = function () {
+
+            document.getElementById("othergender").disabled = true;
+
+            document.getElementById("othergender").value = "";
+
+        }
+
+        document.getElementById("none").onclick = function () {
+
+            document.getElementById("othergender").disabled = true;
+
+            document.getElementById("othergender").value = "";
+
+        }
+
+    </script>
 </body>
 
 </html>
