@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML - Forms</title>
 </head>
-
 <body>
     <h1>User registration</h1>
     <form action="process.php">
@@ -34,57 +32,9 @@
                 <option value="it">Italy</option>
             </select>
         </p>
-        <p>
-            Gender:
-            <input type="radio" name="gender" id="man">
-            <label for="man">Man</label>
-            <input type="radio" name="gender" id="woman">
-            <label for="woman">Woman</label>
-            <input type="radio" name="gender" id="other">
-            <label for="other">Other</label>
-            <input type="text" name="gender" id="othergender" disabled>
-            <input type="radio" name="gender" id="none">
-            <label for="none">Rather not say</label>
-        </p>
         <hr>
         <button type="submit">Submit</button>
-        <button type="reset">Clear form</button>
+        <button type="reset">Clear form</button>        
     </form>
-    <script>
-
-        document.getElementById("other").onclick = function () {
-
-            document.getElementById("othergender").disabled = false;
-
-            document.getElementById("othergender").focus;
-
-        }
-
-        document.getElementById("man").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("woman").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("none").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-    </script>
 </body>
-
 </html>

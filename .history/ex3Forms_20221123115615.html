@@ -42,7 +42,7 @@
             <label for="woman">Woman</label>
             <input type="radio" name="gender" id="other">
             <label for="other">Other</label>
-            <input type="text" name="gender" id="othergender" disabled>
+            <input type="text" name="gender" id="othergender">
             <input type="radio" name="gender" id="none">
             <label for="none">Rather not say</label>
         </p>
@@ -69,14 +69,6 @@
         }
 
         document.getElementById("woman").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("none").onclick = function () {
 
             document.getElementById("othergender").disabled = true;
 
