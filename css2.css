@@ -1,3 +1,58 @@
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"),
+    url("css/Roboto-Medium.ttf") format("truetype");
+    font-style: normal;
+}
+
 body{
-    background-color: red;
+    background-color: black;
+}
+/*
+CSS RULE
+selector {
+    property1: value1;
+    property2: value2;
+    property3: value3;
+}
+*/
+
+/*
+tag selector
+*/
+p{
+    color: #e20074;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid dimgray;
+    /*font stack*/
+    font-family: Roboto, serif;
+    /*
+    serif - Times New Roman
+    sans-serif - Arial
+    monospace - Courier New
+    cursive
+    fantasy
+    */
+}
+
+h1{
+    text-align: center;
+}
+
+/*
+class selector
+*/
+.specific{
+    font-style: italic;
+    letter-spacing: 1mm;
+    word-spacing: 3mm;
+}
+
+/*
+ID selector
+*/
+
+#specialOne{
+    text-transform: uppercase;
 }
