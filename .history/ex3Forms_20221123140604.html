@@ -6,6 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML - Forms</title>
+    <script>
+
+        document.getElementById("other").onclick = function () {
+
+            document.getElementById("othergender").disabled = false;
+
+            document.getElementById("othergender").focus;
+
+        }
+
+        document.getElementById("man").onclick = function () {
+
+            document.getElementById("othergender").disabled = true;
+
+            document.getElementById("othergender").value = "";
+
+        }
+
+        document.getElementById("woman").onclick = function () {
+
+            document.getElementById("othergender").disabled = true;
+
+            document.getElementById("othergender").value = "";
+
+        }
+
+        document.getElementById("none").onclick = function () {
+
+            document.getElementById("othergender").disabled = true;
+
+            document.getElementById("othergender").value = "";
+
+        }
+        document.getElementById("btButton").onclick = function () {
+
+            document.getElementById("formRegister").submit();
+        }
+    </script>
 </head>
 
 <body>
@@ -89,48 +127,10 @@
             <input type="reset" id="btReset" name="btReset" value="Reset form"></input>
         </p>
         <p>
-            <input type="button" id="btButton" name="btButton" value="Click me!"></input>
+            <button type="button" id="btButton" name="btButton" value="Click me!"></input>
         </p>
         <hr>
     </form>
-    <script>
-
-        document.getElementById("other").onclick = function () {
-
-            document.getElementById("othergender").disabled = false;
-
-            document.getElementById("othergender").focus;
-
-        }
-
-        document.getElementById("man").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("woman").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-
-        document.getElementById("none").onclick = function () {
-
-            document.getElementById("othergender").disabled = true;
-
-            document.getElementById("othergender").value = "";
-
-        }
-        document.getElementById("btButton").onclick = function () {
-
-            document.getElementById("formRegister").submit();
-        }
-    </script>
 </body>
 
 </html>
