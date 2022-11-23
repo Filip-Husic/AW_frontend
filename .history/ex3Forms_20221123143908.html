@@ -15,7 +15,7 @@
     <form id="formRegister" action="process.php" enctype="multipart/form-data">
         <p>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" maxlength="80" placeholder="Name" required autofocus pattern="[A-Za-z ]{3,}">
+            <input type="text" id="name" name="name" maxlength="80" placeholder="Name" required autofocus pattern="[A">
         </p>
         <p>
             <label for="address">Address:</label>
@@ -87,11 +87,6 @@
         <p>
             <label for="color">Favorite color</label>
             <input type="color" name="color" id="color">
-        </p>
-        <p>
-            <label for="opinion">Opinion of this site?</label>
-            <input type="range" name="opinion" id="opinion" min="0" max="10" step="1" value="5" onchange="opinionValue.value=this.value">
-            <output id="opinionValue">5</output>
         </p>
         <hr>
         <p>
