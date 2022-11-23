@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Forms</title>
+</head>
+<body>
+    <h1>User registration</h1>
+    <form action="process.php">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" maxlength="80" placeholder="Your name here">
+        </p>
+        <p>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" maxlength="80" placeholder="Your address here">
+        </p>
+        <p>
+            <label for="pc">Postal code:</label>
+            <input type="text" id="pc" name="pc" size="10" maxlength="5" placeholder="Postal code">
+            <input type="text" id="pc_city" name="pc_city" size="20" maxlength="20" placeholder="City">
+
+        </p>
+        
+    </form>
+</body>
+</html>
