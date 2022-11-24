@@ -1,9 +1,12 @@
 body{
     background-color: gray;
 }
+h1{
+    text-align: center;
+}
 
 #photo{
-    width: 50%;
+    width: 40%;
     float: right;
     box-shadow: 0 0 5px 5px #e20074;
     margin: 20px;
