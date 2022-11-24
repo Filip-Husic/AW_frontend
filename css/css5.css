@@ -1,12 +1,25 @@
-/*a{*/
-/*background-color: blue;*/
-/*}*/
+body{
+    background-color: #666666;
+}
+
+a{
+text-decoration: none}
 /*a:visited{*/
 /*    !*link not visited*!*/
 /*    background-color: red;*/
 /*}*/
 
 a:hover{
+    text-decoration: underline;
+}
+p:hover{
+    border: 2px solid #e20074;
+}
+a:active{
+/*    when pressing the mouse button*/
     font-weight: bold;
-    text-decoration: none;
+    background-color: gray;
+}
+a:focus, a:hover{
+    outline: 2px dotted #e20074;
 }
