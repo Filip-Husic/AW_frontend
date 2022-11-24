@@ -5,8 +5,51 @@
     font-style: normal;
 }
 
+/*
+
+Colors
+
+before 16 color names (fuchsia, black, brown, red...)
+
+now 16 million colors :O
+
+transparent color
+color: transparent;
+
+hexadecimal - #RRGGBB - Red(#FF0000), Green(#00FF00), Blue(#0000FF)
+range - between 0 and F(decimal 15)
+#000000 - black
+#FFFFFF - white
+#666666 - gray
+
+RGB(0-255,0-255,0-255)
+rgb(255,0,0) - red
+rgb(0,255,0) - green
+rgb(0,0,255) - blue
+
+rgb(20%,0%,80%)
+
+HSL - hue,saturation,lightness
+hsl(0-360,0%-100%,0%-100%)
+hsl(64,54%,15%)
+
+TRANSPARENCY
+
+a - alpha channel - between 0(opaque) and 1(transparent)
+rgba(255,0,0,0.5)
+hsla(34,50%,50%,0.5)
+#FE43388
+
+OPACITY property
+
+*/
+
+
+
+
 body{
     background-color: black;
+    opacity: 0.5;
 }
 /*
 CSS RULE
@@ -21,7 +64,8 @@ selector {
 tag selector
 */
 p{
-    color: #e20074;
+    /*color: #e20074;  - same magenta in HEX*/
+    color: rgb(226,0,116);
     font-size: 20px;
     font-weight: bold;
     border: solid dimgray;
