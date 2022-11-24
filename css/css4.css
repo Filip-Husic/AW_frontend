@@ -1,3 +1,8 @@
+body{
+    background-color: #666666;
+}
+
+
 .formattedTable, .formattedTable th, .formattedTable td{
     border: 2px solid black;
 }
@@ -9,6 +14,10 @@
 }
 .formattedTable th{
     background-color: #e20074;
+    color: white;
+}
+.formattedTable th:nth-of-type(1),.formattedTable th:nth-of-type(2){
+    border-right: 2px solid white;
     color: white;
 }
 .formattedTable tfoot td{
