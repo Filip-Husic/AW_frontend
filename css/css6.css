@@ -1,0 +1,28 @@
+body{
+    background-color: #666666;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+.topMenu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 0 5px 5px black;
+    display: inline-block;
+}
+.topMenu li{
+    display: inline;
+}
+.topMenu a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.topMenu a:hover{
+    background-color: gray;
+    color: white;
+}
