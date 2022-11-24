@@ -1,0 +1,12 @@
+/*a{*/
+/*background-color: blue;*/
+/*}*/
+/*a:visited{*/
+/*    !*link not visited*!*/
+/*    background-color: red;*/
+/*}*/
+
+a:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
