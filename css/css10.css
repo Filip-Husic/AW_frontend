@@ -12,7 +12,8 @@ h1{
     display: flex;
 }
 #container div{
-    width: 33.33%;
+    flex: 1 1 100%;
+    /*width: 33.33%;*/
     border: 1px solid black;
     padding: 20px;
 
