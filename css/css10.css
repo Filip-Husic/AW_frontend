@@ -10,6 +10,7 @@ h1{
 }
 #container{
     display: flex;
+    column-gap: 20px;
 }
 #container div{
     flex: 1 1 100%;

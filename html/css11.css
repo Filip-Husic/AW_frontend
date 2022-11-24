@@ -1,0 +1,19 @@
+#container{
+    background-image: url("pexels-felix-mittermeier-956981.jpg");
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border: 5px solid #e20074;
+    display: flex;
+
+    font-size: 3em;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+#container p{
+    width: 50%;
+}
