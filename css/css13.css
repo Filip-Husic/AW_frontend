@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+#container div{
+    border: 1px solid black;
+    padding: 20px;
+
+}
+body{
+    max-width: 1000px;
+    margin: auto;
+}
+img{
+    max-width: 100%;
+}
+.clear_floats{
+    clear: both;
+}
+
+/*
+smartphones - 480px
+tablets - 768px / 800px
+notebook/desktop - 1200px/1440px/1600px/1920px
+ */
+
+/*
+RWD - Responsive Web Design
+
+    - flexible layouts (use %/em/rem)
+    - flexible media (img, video...)
+    - media queries (@media)
+
+ */
+
+/* mobile first */
+
+/* media query */
+/* 480px - breakpoint */
+@media screen and (min-width: 481px){
+    #container{
+        column-gap: 20px;
+        display: flex;
+
+    }
+    #container div{
+        width: 33.33%;
+    }
+
+}
