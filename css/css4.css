@@ -1,0 +1,13 @@
+.formattedTable, .formattedTable th, .formattedTable td{
+    border: 2px solid black;
+}
+.formattedTable{
+    border-collapse: collapse;
+}
+.formattedTable th, .formattedTable td{
+    padding: 20px;
+}
+.formattedTable th{
+    background-color: black;
+    color: white;
+}
