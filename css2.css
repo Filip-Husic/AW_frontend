@@ -98,7 +98,7 @@ tag selector
 p{
     /*color: #e20074;  - same magenta in HEX*/
     color: rgb(226,0,116);
-    font-size: 20px;
+    /*font-size: 20px;*/
     font-weight: bold;
     border: solid dimgray;
     /*font stack*/
@@ -110,10 +110,16 @@ p{
     cursive
     fantasy
     */
+
+    /*color: hsl(240,50%,50%) ;*/
+    opacity: 0.9;
+    width: 1000px;
+    font-size: 1.5rem; /* 24px */
 }
 
 h1{
     text-align: center;
+    color: white;
 }
 
 /*
