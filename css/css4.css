@@ -8,6 +8,25 @@
     padding: 20px;
 }
 .formattedTable th{
-    background-color: black;
+    background-color: #e20074;
     color: white;
+}
+.formattedTable tfoot td{
+    background-color: #e20074;
+    color: white;
+}
+/*:nth child - pseudo-class*/
+.formattedTable tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+
+.formattedTable tbody tr:hover{
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+}
+
+.formattedTable caption{
+    caption-side: bottom;
+    margin-top: 15px;
 }
