@@ -37,3 +37,13 @@
     cursor: pointer;
     user-select: none;
 }
+.btClose:hover{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+.btClose:active{
+    box-shadow: none;
+    top: -8px;
+    right: -12px;
+}
