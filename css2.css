@@ -44,6 +44,38 @@ OPACITY property
 
 */
 
+/*
+
+UNITS
+
+absolute
+    px - pixels - MVP
+
+        UNUSED!
+    ****************
+    *pt - points
+    *cm - centimeters
+    *mm - millimeter
+    *in - inches
+    *pc - picas
+    ****************
+
+relative
+    % - percentage - MVP
+
+        UNUSED!
+    ****************
+    *em
+    *rem - root ems
+    *ex - font x-height
+    *vw - viewport width
+    *vh - viewport height
+    *vmin
+    *vmax
+    *ch
+    ****************
+*/
+
 
 
 
