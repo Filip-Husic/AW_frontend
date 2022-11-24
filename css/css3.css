@@ -1,0 +1,23 @@
+/*
+BOX MODEL:
+
+    width
+    height
+    padding - space between content and border
+    border
+    margin - space between 2 html elements
+
+    outline
+    overflow
+ */
+body{
+}
+
+p{
+    height: auto;
+    /*padding: 30px 30px; TOP/BOTTOM, LEFT/RIGHT*/
+    /*padding: 30px 30px 30px 30px; TOP RIGHT BOTTOM LEFT goes clockwise*/
+    border: 3px solid black;
+    margin: auto;
+
+}
