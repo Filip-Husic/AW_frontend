@@ -1,0 +1,55 @@
+@keyframes move {
+    from{
+        background-color: gray;
+    }
+    25%{
+        transform: translateX(400px);
+    }
+    50%{
+        background-color: #e20074;
+        transform: translate(400px,400px);
+    }
+    75%{
+        transform: translate(0,400px);
+    }
+    to{
+        background-color: gray;
+    }
+}
+#anime{
+    animation: move 5s;
+    animation-delay: 1s;
+}
+
+
+.square{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+#rotate:hover{
+    transition: transform 1s;
+}
+#rotate:hover{
+    transform: rotate(45deg);
+}
+#skew{
+    transform: skew(45deg);
+}
+#scale{
+    transform: scale(2);
+}
+#translate{
+    transform: translate(200px, 300px);
+}
+#multiple:hover{
+    transition: transform 3s;
+}
+#multiple:hover{
+    transform: rotate(4500deg);
+}
+
+#multiple{
+    transform: translateX(200px);
+    width: 500px;
+}
