@@ -5,13 +5,14 @@
   <title>Bootstrap</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap1.css">
   <link rel="stylesheet" href="/css/bootstrap-5.2.3-dist/css/bootstrap.min.css">
 </head>
 <body>
   <hr>
   <h1>BRIGHTS</h1>
   <hr>
-  <table class="table table-striped table-hover table-bordered">
+  <table id="formattedTable" class="table table-striped table-hover table-bordered">
     <caption>List of famous people</caption>
     <thead class="table-dark">
     <tr>
@@ -50,17 +51,19 @@
     </tr>
     </tfoot>
   </table>
-  <section class="row">
-    <section class="col-md-3">
-      <h1>Column 1</h1>
+  <div id="columns">
+    <section class="row">
+      <section class="col-md-4">
+        <h1>Column 1</h1>
+      </section>
+      <section class="col-md-4">
+        <h1>Column 2</h1>
+      </section>
+      <section class="col-md-4">
+        <h1>Column 3</h1>
+      </section>
     </section>
-    <section class="col-md-6">
-      <h1>Column 2</h1>
-    </section>
-    <section class="col-md-3">
-      <h1>Column 3</h1>
-    </section>
-  </section>
+  </div>
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
