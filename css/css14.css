@@ -16,6 +16,9 @@
         background-color: gray;
     }
 }
+h1{
+    text-align: center;
+}
 #anime{
     animation: move 5s;
     animation-delay: 1s;
