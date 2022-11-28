@@ -32,6 +32,18 @@ document
         .getElementsByTagName("p")[0]
         .innerHTML="<strong><em>Deutsche Telekom</em></strong>";
     }
-
-
 };
+
+//events
+//mouseover, mouseout, mouseleave, mousemove,dblclick
+//keydown, keypress, keyup, input
+// focus, blur, submit, change, select
+//load, unload, scroll
+
+function showCollapsible() {
+    document.querySelector("#content").style.display="block";
+}
+
+document.querySelector("#btShow")
+    .addEventListener("click",showCollapsible);
+//showCollapsible is a callback
