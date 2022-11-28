@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript - ex1</title>
+</head>
+<body>
+  <script>
+    // //Js commands
+    // // global variables
+    // // var name = "Filip" OLD WAY
+    // let name = "Filip";
+    // let country = "Croatia";
+    // let age = 23;
+    // console.log(name);
+    // console.log(typeof name);
+    // // name = 1999;
+    // console.log(name);
+    // console.log(typeof name);
+    // //variable reusing - not recommended
+    // let city; // undefined
+    // console.log(typeof city);
+    //
+    // //variable names
+    // //they can start with a $ and an _
+    // $_ = 69;
+    // console.log(typeof $_);
+    //
+    // //constants
+    // const PI = 3.14;
+    // const BACKGROUND_COLOR = "YES";
+    //
+    // //math is easy
+    // let total = 5/0;
+    // console.log(total);
+    //
+    // let numWords = 5*"yes"
+    // console.log(numWords);
+    //
+    // let sum = 0.8 - 0.1;
+    // console.log(sum);
+    //
+    // console.log(true + true);
+    // console.log(Math.max(654,654,654,465,645,542,41,47,0));
+    // console.log(Math.min());
+    //
+    // if (name === "Filip"){
+    //   // = - assignment
+    //   // == - compare values - 1 == "1" true
+    //   // === - compare values AND data types - 1 === "1" false
+    //   console.log("Hello " + name);
+    // }
+    // // if(name = "Filip") { true }
+    // // if(name === "Filip" && city === "Bjelovar")
+    // // switch
+    //
+    //
+    // //ternary operator
+    // let a = 5;
+    // let result = (a===5) ? "OK" : "ERROR";
+    // console.log(result);
+    // let result1;
+    // if(a===5){
+    //   result1 = 'OK';
+    // }else {
+    //   result1 = 'ERROR';
+    // }
+    // console.log(result1);
+    //
+    // //Arrays
+    // let students = [undefined,34,true, {yes:495},[41,true,NaN,[undefined]],"Mamma mia",NaN,null];
+    // console.log(students);
+    //
+    // //add elements to array
+    // students[5] = Math.PI;
+    // console.log(students);
+    // students[students.length] = "false";
+    // console.log(students);
+    // students.push(69)
+    // console.log(students);
+    //
+    // //iterate an array
+    // for (let i=0; i< students.length; i++){
+    //   console.log(students[i])
+    // }
+    //
+    // for (let student of students){
+    //   console.log(student);
+    // }
+    // console.log(students.reverse());
+    //
+    //Strings - array-like array of chars
+    // let animal = "Elephant"
+    // for (let letter of animal){
+    //   console.log(letter)
+    // }
+    // // console.log(animal.reverse) error
+    // console.log("--------------------")
+    // //ex1 reverse a string
+    //
+    // let reverseAnimal = "";
+    // for (let i = animal.length-1; i>=0; i--){
+    //   reverseAnimal += animal[i];
+    //   console.log(animal[i]);
+    // }
+    // console.log(reverseAnimal);
+
+    // let animal_temp = animal.split("").reverse().join("");
+    // console.log(animal_temp);
+
+    // //multidimensional arrays
+    // let cites = [];
+    // cites.push(["Zagreb","Bjelovar","Dubrovnik"]);
+    // cites.push(["Porto;","Faro","Lisbon"]);
+    // cites.push(["Rome;","Venice","Florence"]);
+    // console.log(cites);
+
+    //literal objects = {}
+    let person = {
+      name: "Filip Husic",
+      address: {
+        street: "Real street 69",
+        city: "A city",
+        postalCode: "6969-420 City"
+      },
+      country: "Croatia",
+      contacts: {
+        email: "filip@husic.com",
+        phoneNumbers: [6969420,4206969]
+      }
+    };
+    console.log(person.name);
+    console.log(person.address.city);
+    console.log(person.contacts.phoneNumbers[0]);
+
+    //array of objects
+    let countryInfo = [
+      { countryName: "Croatia", capital: "Zagreb", population: 4000000 },
+      { countryName: "France", capital: "Paris", population: 65619627 },
+      { countryName: "Germany", capital: "Berlin", population: 84425972 },
+    ]
+
+    console.log(countryInfo[2].capital)
+
+    //functions - usually on top of the script
+    function showMessage(message) {
+      console.log(message);
+    }
+    showMessage("Hello, world!");
+    // console.log(addNums(420,69)); using function before defining it
+    // is possible but not recommended
+    function addNums(value1, value2) {
+      return value1+value2;
+    }
+    console.log(addNums(420,69));
+
+    //function expression
+    let addMultipleValues = function (...values){//rest operator "..."
+      //anonymous function
+      let total = 0;
+      for (let value of values){
+        total+=value;
+      }
+      return total;
+    }
+    console.log(addMultipleValues(2,3,45,69,62,2));
+    console.log(addMultipleValues(2,3));
+    console.log(addMultipleValues(2,3,9));
+
+    let valueString = "croatia"
+    function toUpperCase(word) {
+      return word.toUpperCase();
+    }
+    console.log(toUpperCase(valueString));
+
+    //arrow functions
+    let valueString1 = word => word.toUpperCase();
+    console.log(valueString1(valueString));
+
+    //global variable
+    let sport = "Paintball";
+    function foo() {
+      console.log(sport);
+      sport = "Tennis";//local scope
+      console.log(sport);
+    }
+    foo();
+    //block scope
+    for (let i=0;i<10;i++){
+      console.log(i);
+    }
+    // console.log(i); i not defined
+
+
+
+  </script>
+</body>
+</html>
