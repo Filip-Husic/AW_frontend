@@ -40,14 +40,23 @@ document
 // focus, blur, submit, change, select
 //load, unload, scroll
 
+console.log(
+    window
+        .getComputedStyle(document
+            .querySelector("#content"))
+        .getPropertyValue("display"));
+
 //show hidden section
 function showCollapsible() {
-    if (document.querySelector("#content").style.display === ""){
+    let currentVisibility = window.getComputedStyle(document
+            .querySelector("#content"))
+        .getPropertyValue("display")
+    if (currentVisibility === "none"){
         document.querySelector("#content").style.display="block";
-        document.querySelector("#btShow").innerHTML="Hide";
+        this.textContent="Hide";
     }else {
-        document.querySelector("#content").style.display="";
-        document.querySelector("#btShow").innerHTML="Show";
+        document.querySelector("#content").style.display="none";
+        this.textContent="Show";
 
     }
 }
