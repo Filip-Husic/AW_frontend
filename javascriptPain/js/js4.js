@@ -17,4 +17,4 @@ document
             .querySelector(".modal")
             .style.visibility="hidden";
 
-    })
+    });
