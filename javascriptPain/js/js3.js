@@ -12,5 +12,11 @@ for (let title of titles){
         }else {
             this.nextElementSibling.style.display="none";
         }
-    });
+        for (let title1 of titles){
+            if (title1 !== this){
+                title1.nextElementSibling.style.display="none";
+            }
+        }
+
+        });
 }
