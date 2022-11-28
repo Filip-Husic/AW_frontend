@@ -191,9 +191,26 @@
     for (let i=0;i<10;i++){
       console.log(i);
     }
-    // console.log(i); i not defined
+    // console.log(i); i is not defined
+    //OOP in js - everything is an object
+    let name1 = "Filip";
+    let name2 = String("Pilif");
+    console.log(name1.toString());
+    console.log(name2.toString());
 
-
+    //from 2015 we can use classes as syntactic sugar
+    class User {
+      age=23;
+      constructor(name = "Filip",age) {
+        this.name = name;
+        this.age = age;
+      }
+      sayHello(){
+        console.log(this.name + " says hi!");
+      }
+    }
+    let user1 = new User("Dummy1",69);
+    user1.sayHello();
 
   </script>
 </body>
