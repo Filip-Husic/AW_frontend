@@ -42,8 +42,7 @@ document
 
 //show hidden section
 function showCollapsible() {
-    let content = document.querySelector("#content").style.display;
-    if (content === ""){
+    if (document.querySelector("#content").style.display === ""){
         document.querySelector("#content").style.display="block";
         document.querySelector("#btShow").innerHTML="Hide";
     }else {
