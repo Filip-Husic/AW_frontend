@@ -1,5 +1,5 @@
 #accordion{
-    width: 400px;
+    width: 100%;
 }
 /* child selector */
 #accordion > h2{
@@ -9,8 +9,15 @@
     margin: 0;
     cursor: pointer;
     user-select: none;
+
 }
+#accordion > h2 >i{
+    float: right;
+}
+
 #accordion article{
     border: 1px solid black;
     padding: 20px;
+    animation: ease-in;
+    animation-duration: 1s;
 }
