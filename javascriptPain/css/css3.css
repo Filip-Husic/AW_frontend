@@ -1,0 +1,16 @@
+#accordion{
+    width: 400px;
+}
+/* child selector */
+#accordion > h2{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}
+#accordion article{
+    border: 1px solid black;
+    padding: 20px;
+}
