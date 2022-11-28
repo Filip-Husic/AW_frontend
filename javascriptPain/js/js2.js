@@ -40,8 +40,17 @@ document
 // focus, blur, submit, change, select
 //load, unload, scroll
 
+//show hidden section
 function showCollapsible() {
-    document.querySelector("#content").style.display="block";
+    let content = document.querySelector("#content").style.display;
+    if (content === ""){
+        document.querySelector("#content").style.display="block";
+        document.querySelector("#btShow").innerHTML="Hide";
+    }else {
+        document.querySelector("#content").style.display="";
+        document.querySelector("#btShow").innerHTML="Show";
+
+    }
 }
 
 document.querySelector("#btShow")
