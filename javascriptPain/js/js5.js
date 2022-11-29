@@ -59,4 +59,63 @@ console.log(firstName2);
 let firstName3 = firstName1.slice(-5);
 console.log(firstName3);
 
-//replace
+//replace regex g-global, i-case-insensitive
+let replaced1 = fullName1.replace(/i/gi,"#");
+console.log(replaced1);
+
+let replaced2 = fullName1.replaceAll("i","#");
+console.log(replaced2);
+
+//trim
+let anotherString = "        wow so many spaces       ";
+console.log(anotherString.trim());
+
+//other methods
+let yetAnotherString = "Test";
+console.log(yetAnotherString.padStart(10,"$"));
+console.log(yetAnotherString.padEnd(10,"$"));
+console.log(yetAnotherString.repeat(10));
+
+//regex
+
+let regex1 = /^[A-za-z ]*$/;
+// let regex2 = new RegExp(/^[A-za-z ]*$/);
+//specialized regex methods
+//exec, test
+if (!regex1.test(fullName1)){
+    console.log("Error, name doesn't contain only letters and spaces!")
+}else {
+    console.log(fullName1 + " is a valid name.")
+}
+//general string methods that use regex
+//match, replace, split
+
+// AA-99—99
+// 99-AA-99
+// 99-99-AA
+// AA-99-AA
+//check valid licence plate
+let licencePlate = "BB-CF-RE"
+//validate
+// if length!==8 => false
+// if 3rd and 6th char are different from "-" => false
+// other chars must be uppercase letters or numbers
+// pairs of chars must be same type, either nums or letters
+// pairs must not repeat
+
+function checkLicencePlate(licencePlate) {
+    if (licencePlate.length!==8){
+        console.log("Invalid licence plate, it must have exactly 8 characters!")
+        return false;
+    }
+    if (licencePlate.charAt(2) !== "-" || licencePlate.charAt(5) !== "-"){
+        console.log("Invalid licence plate, 3rd and 6th char must be a dash '-'!")
+        return false;
+    }
+    console.log("Valid licence plate!")
+    return true;
+    //TODO finish this bad boy without regex!
+}
+
+console.log(checkLicencePlate(licencePlate));
+
