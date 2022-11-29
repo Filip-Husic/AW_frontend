@@ -1,0 +1,27 @@
+:focus-visible{
+    outline-color: #e20074;
+    outline-offset: 5px;
+}
+
+.error{
+    background-color: yellow;
+}
+#form_person input[type=text]{
+    width: 400px;
+}
+#form_person label{
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+#btSign {
+    float: left;
+}
+#form_person textarea{
+    height: 100px;
+    resize: none;
+}
+.textarea label{
+    vertical-align: top;
+}

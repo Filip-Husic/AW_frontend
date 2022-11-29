@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Form</title>
+  <link rel="stylesheet" href="/javascriptPain/css/css6.css">
+</head>
+<body>
+    <h2>Customer sign up</h2>
+    <form id="form_person">
+        <p>
+            <label for="name">Name:
+                <input type="text" id="name">
+                <small id="name_error"></small>
+            </label>
+        </p>
+        <p>
+            <label for="address">Address:
+                <input type="text" id="address">
+            </label>
+        </p>
+        <p>
+            <label for="postal_code">Postal code:
+                <input type="text" id="postal_code">
+            </label>
+        </p>
+        <p>
+            <label for="email">Email:
+                <input type="text" id="email">
+                <small id="email_error"></small>
+            </label>
+        </p>
+        <p>
+            <label for="country">Country:
+                <select name="country" id="country">
+                    <option value="">-- Please select a country--</option>
+                    <option value="pt">Portugal</option>
+                    <option value="hr">Croatia</option>
+                    <option value="cz">Czechia</option>
+                    <option value="sk">Slovakia</option>
+                </select>
+                <small id="country_error"></small>
+            </label>
+        </p>
+        <p>
+            <label for="obs" class="textareaLabel">Obs:
+                <textarea id="obs">
+                </textarea>
+            </label>
+        </p>
+        <p>
+            <input type="button" id="btSign" value="Sign-up">
+        </p>
+
+    </form>
+
+  <!-- script time-->
+  <script src="/javascriptPain/js/js6.js"></script>
+  <!-- script time-->
+</body>
+</html>
