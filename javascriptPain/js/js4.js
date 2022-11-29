@@ -26,11 +26,18 @@ document
     });
 
 function changeEverything(position) {
-    let image = images[position].getAttribute("src");
+    let image = images[position]
+        .getAttribute("src");
     document
-        .querySelector(".modal img").setAttribute("src",image);
-    document.querySelector(".modal img").setAttribute("data-id",position);
-    document.querySelector("#caption").textContent=images[position].getAttribute("alt");
+        .querySelector(".modal img")
+        .setAttribute("src",image);
+    document
+        .querySelector(".modal img")
+        .setAttribute("data-id",position);
+    document
+        .querySelector("#caption")
+        .textContent=images[position]
+        .getAttribute("alt");
 }
 
 
