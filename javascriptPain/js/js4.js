@@ -15,6 +15,7 @@ for (let image of images){
             document.querySelector("#caption").textContent=this.getAttribute("alt");
         });
 }
+
 document
     .querySelector(".modal, .btClose")
     .addEventListener("click", function () {
@@ -23,6 +24,15 @@ document
             .style.visibility="hidden";
 
     });
+
+function changeEverything(position) {
+    let image = images[position].getAttribute("src");
+    document
+        .querySelector(".modal img").setAttribute("src",image);
+    document.querySelector(".modal img").setAttribute("data-id",position);
+    document.querySelector("#caption").textContent=images[position].getAttribute("alt");
+}
+
 
 document
     .querySelector(".fa-chevron-right")
@@ -35,11 +45,7 @@ document
         if (position === images.length-1){
             position=0;
         }
-        let image = images[position].getAttribute("src");
-        document
-            .querySelector(".modal img").setAttribute("src",image);
-        document.querySelector(".modal img").setAttribute("data-id",position);
-        document.querySelector("#caption").textContent=images[position].getAttribute("alt");
+        changeEverything(position);
 
     });
 document
@@ -55,10 +61,5 @@ document
         }else {
 
         }
-        let image = images[position].getAttribute("src");
-        document
-            .querySelector(".modal img").setAttribute("src",image);
-        document.querySelector(".modal img").setAttribute("data-id",position);
-        document.querySelector("#caption").textContent=images[position].getAttribute("alt");
-
+        changeEverything(position);
     });
