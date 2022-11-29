@@ -44,3 +44,19 @@ function letterPositions(letter, phrase) {
 
 console.log(letterPositions("e",phrase));
 //extracting
+console.log(fullName2.startsWith("Fil"));
+console.log(fullName2.startsWith("Baba"));
+console.log(fullName2.endsWith("ic"));
+console.log(fullName2.charAt(4)==="p");
+
+//substring (start_pos,end_pos excluded)
+let firstName1 = fullName2.substring(0,5);
+console.log(firstName1);
+//substr (start_pos,num_chars)
+let firstName2 = fullName2.substr(0,5);
+console.log(firstName2);
+//slice (start_pos,end_pos excluded)
+let firstName3 = firstName1.slice(-5);
+console.log(firstName3);
+
+//replace
