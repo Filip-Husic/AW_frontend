@@ -4,7 +4,7 @@
 
 // <books></books> use custom tags
 
-const url = "https://jsonplaceholder.typicode.com/posts";
+const url = "https://jsonplaceholder.typicode.com/posts?_start=0&_limit=20";
 
 const xhr = new XMLHttpRequest();
 

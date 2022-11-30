@@ -36,3 +36,6 @@ body{
     caption-side: bottom;
     margin-top: 15px;
 }
+#info{
+    box-shadow: 2px 2px 2px black;
+}
