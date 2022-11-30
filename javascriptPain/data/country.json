@@ -1,0 +1,24 @@
+{
+  "countries":
+              [
+                {
+                  "name": "Germany",
+                  "population": 400000
+                },
+                {
+                  "name": "France",
+                  "population": 450000
+                },
+                {
+                  "name": "Spain",
+                  "population": 350000
+                }
+              ],
+  "city":
+          [
+            {
+              "name": "Berlin",
+              "country": "Germany"
+            }
+          ]
+}

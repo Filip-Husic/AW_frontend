@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<countries>
+    <country>
+        <name>Germany</name>
+        <population>4000000</population>
+    </country>
+    <country>
+        <name>France</name>
+        <population>4500000</population>
+    </country>
+    <country>
+        <name>Spain</name>
+        <population>3500000</population>
+    </country>
+</countries>
