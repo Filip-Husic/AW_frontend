@@ -1,3 +1,5 @@
+document.querySelector("#modal").style.visibility="visible";
+
 const queryString = window.location.search;
 // console.log(queryString); // ?id=1
 const params = new URLSearchParams(queryString);
@@ -19,6 +21,7 @@ if (!params.has("id")){
         })
         .then(post => {
             document.querySelector("#info").innerHTML = `<h2>Title: ${post.title}</h2><p>Content: ${post.body}</p>`;
+            setTimeout('document.querySelector("#modal").style.visibility="hidden"',1000);
         })
         .catch(error => console.log("An error has occurred: " + error));
 }
