@@ -35,9 +35,17 @@ xhr.onreadystatechange = function () {
                 //We can receive text, HTML, JSON or XML from the server
                 // JSON.parse converts JSON string to an array
                 let posts = JSON.parse(this.responseText);
-                for (let post of posts) {
+                let content= "";
+               for (let post of posts) {
                     console.log(post.title);
-                }
+                    content += '<tr>';
+                    content += `<td>${post.userId}</td>`;
+                    content += `<td>${post.title}</td>`;
+                    content += `<td>${post.body}</td>`;
+                    content += '</tr>';
+               }
+                document.querySelector(".dataTable tbody").innerHTML=content;
+                document.querySelector("#totalPosts").innerHTML=posts.length;
                 break;
             }
             case 404: {

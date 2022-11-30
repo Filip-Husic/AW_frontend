@@ -1,0 +1,38 @@
+body{
+    background-color: #666666;
+}
+
+
+.dataTable, .dataTable th, .dataTable td{
+    border: 2px solid black;
+}
+.dataTable{
+    border-collapse: collapse;
+}
+.dataTable th, .dataTable td{
+    padding: 20px;
+}
+.dataTable th{
+    background-color: #e20074;
+    color: white;
+}
+
+.dataTable tfoot td{
+    background-color: lightgray;
+    color: white;
+}
+/*:nth child - pseudo-class*/
+.dataTable tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+
+.dataTable tbody tr:hover{
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+}
+
+.dataTable caption{
+    caption-side: bottom;
+    margin-top: 15px;
+}
