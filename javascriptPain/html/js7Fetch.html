@@ -9,24 +9,30 @@
     <link rel="stylesheet" href="/javascriptPain/css/css7.css">
 </head>
 <body>
-<section id="navigation">
-    <button type="button" id="firstBt" title="First page">&lt;&lt; First</button>
-    <button type="button" id="previousBt" title="Previous page">&lt; Previous</button>
-    <button type="button" id="nextBt" title="Next page">&gt; Next</button>
-    <button type="button" id="lastBt" title="Last page">&gt;&gt; Last</button>
-</section>
-<section id="info">
-    Records
-    <span id="begin">
+
+<section id="controls">
+    <section id="navigation">
+        <button type="button" id="firstBt" title="First page">&lt;&lt; First</button>
+        <button type="button" id="previousBt" title="Previous page">&lt; Previous</button>
+        <button type="button" id="nextBt" title="Next page">&gt; Next</button>
+        <button type="button" id="lastBt" title="Last page">&gt;&gt; Last</button>
+    </section>
+    <section id="info">
+        Records
+        <span id="begin">
 
     </span> to
-    <span id="end">
+        <span id="end">
 
     </span>
-    of a total of
-    <span id="total">
-
+        of a total of
+        <span id="total">
     </span>
+    </section>
+</section>
+<section>
+    <label for="search">Search:</label>
+    <input type="text" id="search">
 </section>
 <table class="dataTable">
     <thead>
@@ -47,6 +53,8 @@
     </tr>
     </tfoot>
 </table>
+<p id="noResults">No results</p>
+<a href="#">Back to top</a>
 <footer class="footer width-full container-xl p-responsive">
     <h2 class="sr-only">Additional info</h2>
 

@@ -14,6 +14,9 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+#noResults{
+    display: none;
+}
 
 .dataTable, .dataTable th, .dataTable td{
     border: 2px solid black;
