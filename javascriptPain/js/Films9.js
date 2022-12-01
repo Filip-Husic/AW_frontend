@@ -7,9 +7,7 @@ function paginate() {
             if (!response.ok){
                 return Promise.reject("Page doesn't exist!");
             }else {
-                totalNumberRecords = response.headers.get("X-Total-Count");
                 return response.json();
-
             }
         })
         .then(films => {
@@ -27,6 +25,7 @@ function paginate() {
                 content += '</tr>';
             }
             document.querySelector(".filmsTable tbody").innerHTML=content;
+            document.querySelector("#totalFilms").textContent=films.length;
 
         })
         .catch(error => console.log("An error has occurred: " + error));
