@@ -1,0 +1,32 @@
+{
+  "films": [
+    {
+      "id": 1,
+      "title": "12 Monkeys",
+      "year": "1995",
+      "director": "Terry Gilliam",
+      "genre": "SciFi"
+    },
+    {
+      "id": 2,
+      "title": "The 5th element",
+      "year": "1997",
+      "director": "Luc Besson",
+      "genre": "SciFi"
+    },
+    {
+      "id": 3,
+      "title": "Blade Runner ",
+      "year": "1982",
+      "director": "Ridley Scott",
+      "genre": "SciFi"
+    }
+  ],
+  "genres": [
+    "SciFi",
+    "Drama",
+    "Action",
+    "Thriller",
+    "Adventure"
+  ]
+}

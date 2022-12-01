@@ -25,6 +25,10 @@ fetch(url)
         //refactor filter using forEach and if
 
         // let results = posts.map(post => post.title.toUpperCase());
+        let temperatures=[0,19,27,6,-3];
+        let total=temperatures.reduce((accumulator, elementValue) => accumulator + elementValue);
+        console.log(total);
+        console.log("Average temperature: " + total/temperatures.length);
 
         let results = posts.map(post => ({
             ...post,//spread operator
