@@ -20,9 +20,20 @@
       "year": "1982",
       "director": "Ridley Scott",
       "genre": "SciFi"
+    },
+    {
+      "title": "1",
+      "year": "2",
+      "director": "3",
+      "genre": "SciFi",
+      "id": 4
     }
   ],
   "genres": [
-    "SciFi", "Drama", "Action", "Thriller", "Adventure"
+    "SciFi",
+    "Drama",
+    "Action",
+    "Thriller",
+    "Adventure"
   ]
 }
