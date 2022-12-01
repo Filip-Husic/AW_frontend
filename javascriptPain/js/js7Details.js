@@ -21,7 +21,7 @@ if (!params.has("id")){
         })
         .then(post => {
             document.querySelector("#info").innerHTML = `<h2>Title: ${post.title}</h2><p>Content: ${post.body}</p>`;
-            setTimeout('document.querySelector("#modal").style.visibility="hidden"',1000);
+            setTimeout('document.querySelector("#modal").style.visibility="hidden"',500);
         })
         .catch(error => console.log("An error has occurred: " + error));
 }

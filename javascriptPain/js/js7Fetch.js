@@ -4,6 +4,7 @@
 const url = "https://jsonplaceholder.typicode.com/posts";
 let startingRecord = 0;
 const numberRecordsPerPage = 25;
+let totalNumberRecords;
 
 function paginate(start) {
     let urlValue = url+"?_start="+start+"&_limit="+numberRecordsPerPage;
@@ -13,6 +14,7 @@ function paginate(start) {
             if (!response.ok){
                 return Promise.reject("Page doesn't exist!");
             }else {
+                totalNumberRecords = response.headers.get("X-Total-Count");
                 return response.json();
 
             }
@@ -30,7 +32,7 @@ function paginate(start) {
                 content += '</tr>';
             }
             document.querySelector(".dataTable tbody").innerHTML=content;
-            document.querySelector("#totalPosts").innerHTML=posts.length;
+            document.querySelector("#totalPosts").textContent=totalNumberRecords;
 
         })
     .catch(error => console.log("An error has occurred: " + error));
@@ -50,11 +52,26 @@ tablePosts.addEventListener("click",function (e) {
     }
 });
 
-document.querySelector("#nextBt").addEventListener("click",function () {
-    startingRecord += numberRecordsPerPage;
+document.querySelector("#firstBt").addEventListener("click",function () {
+    startingRecord = 0;
     paginate(startingRecord);
 });
 document.querySelector("#previousBt").addEventListener("click",function () {
     startingRecord -= numberRecordsPerPage;
+    if (startingRecord <= 0){
+        startingRecord = 0;
+    }
+
+    paginate(startingRecord);
+});
+document.querySelector("#nextBt").addEventListener("click",function () {
+    startingRecord += numberRecordsPerPage;
+    if (startingRecord >= totalNumberRecords){
+        startingRecord = totalNumberRecords - numberRecordsPerPage;
+    }
+    paginate(startingRecord);
+});
+document.querySelector("#lastBt").addEventListener("click",function () {
+    startingRecord = totalNumberRecords - numberRecordsPerPage;
     paginate(startingRecord);
 });
