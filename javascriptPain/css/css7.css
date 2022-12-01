@@ -1,7 +1,12 @@
 body{
     background-color: #666666;
+    width: 750px;
+    margin: auto;
 }
-
+#navigation{
+    width: 750px;
+    margin: auto;
+}
 
 .dataTable, .dataTable th, .dataTable td{
     border: 2px solid black;

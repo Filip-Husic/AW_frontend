@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - Ajax</title>
+    <link rel="stylesheet" href="/css/bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/javascriptPain/css/css7.css">
 </head>
 <body>
+<section id="navigation">
+    <button type="button" id="firstBt">&lt;&lt;</button>
+    <button type="button" id="previousBt">&lt;</button>
+    <button type="button" id="nextBt">&gt;</button>
+    <button type="button" id="lastBt">&gt;&gt;</button>
+</section>
 <table class="dataTable">
     <thead>
         <tr>
@@ -21,7 +28,7 @@
     </tbody>
     <tfoot>
     <tr>
-        <td colspan="3"> Total number of posts:
+        <td colspan="3"> Total number of posts on this page:
             <span id="totalPosts"></span>
         </td>
     </tr>
