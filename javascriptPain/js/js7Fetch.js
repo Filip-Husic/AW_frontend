@@ -34,6 +34,9 @@ function paginate(start) {
             document.querySelector(".dataTable tbody").innerHTML=content;
             document.querySelector("#totalPosts").textContent=totalNumberRecords;
 
+            document.querySelector("#begin").textContent=start+1;
+            document.querySelector("#end").textContent=start+numberRecordsPerPage;
+            document.querySelector("#total").textContent=totalNumberRecords;
         })
     .catch(error => console.log("An error has occurred: " + error));
 }

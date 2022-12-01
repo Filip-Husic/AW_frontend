@@ -7,6 +7,13 @@ body{
     width: 750px;
     margin: auto;
 }
+#info{
+    padding: 10px;
+    background-color: lightgray;
+    box-shadow: 2px 2px 2px 1px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .dataTable, .dataTable th, .dataTable td{
     border: 2px solid black;
@@ -33,7 +40,7 @@ body{
 
 .dataTable tbody tr:hover{
     cursor: pointer;
-    background-color: #666;
+    background-color: #e20074;
     color: white;
 }
 
@@ -41,9 +48,7 @@ body{
     caption-side: bottom;
     margin-top: 15px;
 }
-#info{
-    box-shadow: 2px 2px 2px black;
-}
+
 .lds-spinner {
     color: #e20074;
     display: inline-block;
