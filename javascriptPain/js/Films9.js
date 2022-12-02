@@ -24,6 +24,7 @@ function showFilms() {
                 content += `<td>${film.genre}</td>`;
                 content += '</tr>';
             }
+
             document.querySelector(".filmsTable tbody").innerHTML=content;
             document.querySelector("#totalFilms").textContent=films.length;
 
@@ -54,6 +55,30 @@ function showGenres() {
 showGenres();
 
 
+function validateForm(fTitle, fYear, fDirector, fGenre) {
+    let errors = false;
+    // if (fTitle.value.trim() === ""){
+    //     document.querySelector("#title_error").textContent="The title is incorrect";
+    // }
+    let re = /^[A-Za-z ]{3,}$/;
+    if (!re.test(fTitle.value)) {
+        document.querySelector("#title_error")
+            .textContent = "Title incorrect, must contain only letters and at least 3 letters!";
+        errors = true;
+    } else {
+        document.querySelector("#title_error").textContent = "";
+    }
+    let minYear=parseInt(document.querySelector("#year").getAttribute("min"));
+    let maxYear=parseInt(document.querySelector("#year").getAttribute("max"));
+    if (parseInt(fYear.value)<minYear || parseInt(fYear.value)>maxYear) {
+        document.querySelector("#year_error").textContent=`'Year' field must be equal or bigger than ${minYear} and smaller than ${maxYear}!`;
+        errors=true;
+    } else {
+        document.querySelector("#year_error").textContent="";
+    }
+    return !errors;
+}
+
 document.querySelector("#filmForm").addEventListener("submit",function (e) {
     e.preventDefault();
     let fTitle = document.querySelector("#title");
@@ -61,39 +86,54 @@ document.querySelector("#filmForm").addEventListener("submit",function (e) {
     let fDirector = document.querySelector("#director");
     let fGenre = document.querySelector("#genre");
 
-    fetch(urlFilm, {
-        method: "POST",
-        headers: {
-            "Content-Type" : "application/json"
-        },
-        body: JSON.stringify({
-            title: fTitle.value,
-            year: fYear.value,
-            director: fDirector.value,
-            genre: fGenre.value
+    if (validateForm(fTitle, fYear, fDirector, fGenre)) {
+        fetch(urlFilm, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: fTitle.value.trim(),
+                year: fYear.value.trim(),
+                director: fDirector.value.trim(),
+                genre: fGenre.value.trim()
+            })
         })
-    })
-        .then(response => {
-            if (!response.ok) {
-                return Promise.reject("Page doesn't exist!");
-            } else {
-                return response.json();
-            }
+            .then(response => {
+                if (!response.ok) {
+                    return Promise.reject("Page doesn't exist!");
+                } else {
+                    return response.json();
+                }
 
-        })
-        .then(answer => {
-            console.log(answer);
-            showFilms();
-            fTitle.value="";
-            fYear.value="";
-            fDirector.value="";
-            fGenre.value="";
-            alert("Record created with id = " + answer.id);
+            })
+            .then(answer => {
+                console.log(answer);
+                showFilms();
+                fTitle.value = "";
+                fYear.value = "";
+                fDirector.value = "";
+                fGenre.value = "";
+                alert("Record created with id = " + answer.id);
 
-        })
-        .catch(error => console.log("An error has occurred: " + error));
+            })
+            .catch(error => console.log("An error has occurred: " + error));
+    }else {
+        alert("form error!")
+    }
 })
+
+
 showFilms();
+
+document.querySelector("tbody").addEventListener("click",function (e) {
+    if (e.target.nodeName === "INPUT"){
+        let id = e.target.getAttribute("data-id");
+        fetch(urlFilm + "/" + id, {
+            method: "DELETE",
+        });
+    }
+})
 
 
 

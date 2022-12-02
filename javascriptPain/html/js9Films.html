@@ -12,9 +12,20 @@
 <hr>
 <section class="form-check">
     <form id="filmForm">
-        <div class="form-group"><label for="title">Title:</label><input class="form-control" type="text" id="title"></div>
-        <div class="form-group"><label for="year">Year:</label><input class="form-control" type="text" id="year"></div>
-        <div class="form-group"><label for="director">Director:</label><input class="form-control" type="text" id="director"></div>
+        <p class="form-group">
+            <label for="title">Title:</label>
+            <input class="form-control" type="text" id="title">
+            <small id="title_error"></small>
+        </p>
+        <p class="form-group">
+            <label for="year">Year:</label>
+            <input class="form-control" type="number" min="1900" max="2022" id="year">
+            <small id="year_error"></small>
+        </p>
+        <p class="form-group">
+            <label for="director">Director:</label>
+            <input class="form-control" type="text" id="director">
+        </p>
         <label for="genre">Genre:
             <select id="genre"></select>
         </label>
